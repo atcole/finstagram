@@ -1,0 +1,51 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+
+header {
+    background-color: #244751;
+    color: #E8FDFF;
+    
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    background-color: white;
+    padding: 16px;
+}
+
+.post {
+    margin-bottom: 48px;
+    
+}
+
+.post .user-info img{
+    border-radius: 50%;
+    
+}
+
+.user-info a{
+    margin: 5px;
+    padding: 5px;
+    
+}
+.user-info a:hover {
+    outline: solid red 1px;
+
+}
+
+nav.user-info {
+    text-align: center;
+    display: block;
+    
+}
+
+h2 {
+    font-family: "https://fonts.google.com/specimen/Itim";
+    
+}
