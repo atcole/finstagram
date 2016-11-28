@@ -1,0 +1,14 @@
+puts "Enter a number:"
+    number1 = gets.chomp
+
+puts "Enter another number:"
+    number2 = gets.chomp
+
+puts "Enter a mathematical operator:"
+    operator = gets.chomp
+    operator.to_s!
+    
+output = number1 operator number2
+
+puts "#{number1} #{operator} #{number2} = #{output}"
+
