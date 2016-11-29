@@ -101,14 +101,35 @@ get '/posts/:id' do
     
 end
 
-get '/fun' do
-    
-    @items = [
-        
-            "Item 1",
-            "Item 2"
-            ]
-    erb :fun
-end
-    
+post '/comments' do
 
+    text = params[:text]
+    post_id = params[:post_id]
+    
+    comment = Comment.new({ text: text, user_id: current_user.id, post_id: post_id })
+    
+    comment.save
+
+    redirect(back)
+
+end
+
+post '/likes' do
+
+    post_id = params[:post_id]
+    
+    like = Like.new({ user_id: current_user.id, post_id: post_id })
+    
+    like.save
+    
+    redirect(back)
+
+end
+
+delete '/likes/:id' do
+
+    like = Like.find(params[:id])
+    like.destroy
+    redirect(back)
+    
+end
